@@ -25,7 +25,7 @@ return packer.startup(function(use)
   use 'szw/vim-maximizer'
   use 'tpope/vim-surround'
   use 'vim-scripts/ReplaceWithRegister'
-  use 'numToStr/Comment.nvim' 
+  use 'numToStr/Comment.nvim'
   use {
   'nvim-tree/nvim-tree.lua',
     requires = {
@@ -46,16 +46,17 @@ return packer.startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'BurntSushi/ripgrep'
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/vim-vsnip' 
-  use 'hrsh7th/vim-vsnip-integ'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/vim-vsnip'
   use "rafamadriz/friendly-snippets"
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'windwp/nvim-autopairs'
 
   if packer_bootstrap then
