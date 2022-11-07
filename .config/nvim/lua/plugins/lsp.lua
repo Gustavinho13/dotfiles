@@ -42,11 +42,6 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local lsp_flags = {
-  -- This is the default in Nvim 0.7+
-  debounce_text_changes = 150,
-}
-
 lspconfig["html"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
@@ -98,4 +93,23 @@ lspconfig["sumneko_lua"].setup({
       },
     },
   },
+})
+
+lspconfig["clangd"].setup({
+  on_attach = on_attach,
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--pch-storage=memory",
+    "--clang-tidy",
+    "--suggest-missing-includes",
+    "--all-scopes-completion",
+    "--pretty",
+    "--header-insertion=never",
+    "-j=4",
+    "--inlay-hints",
+    "--header-insertion-decorators",
+  },
+  filetypes = {"c", "cpp", "objc", "objcpp"},
+  capabilities = capabilities,
 })

@@ -9,8 +9,8 @@ set.mouse = 'a'
 -- tab settings
 set.expandtab = true
 set.autoindent = true
-set.shiftwidth = 2
-set.tabstop = 2
+set.shiftwidth = 4
+set.tabstop = 4 
 
 -- search settings
 set.ignorecase = true
